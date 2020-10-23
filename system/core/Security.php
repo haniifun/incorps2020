@@ -1087,4 +1087,6 @@ class CI_Security {
 		return $this->_csrf_hash;
 	}
 
+		
+
 }
