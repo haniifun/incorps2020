@@ -1,8 +1,7 @@
 <?php 
-
-function esc_url( $url, $protocols = null, $_context = 'display' ) {
-    return $url;   
-}
+  function esc_url($url) {
+      return $url;   
+  }
 ?>
 
 <!DOCTYPE html>
