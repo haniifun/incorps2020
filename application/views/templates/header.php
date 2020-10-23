@@ -1,6 +1,7 @@
 <?php 
   function esc_url($url) {
-      return $url;   
+      $escape = html_escape($url);
+      return $escape;
   }
 ?>
 
@@ -9,7 +10,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?= $title ?></title> 
+  <title><?= html_escape($title) ?></title> 
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" sizes="57x57" href="<?= esc_url(base_url('assets/')) ?>img/favicon-incorps.png">
@@ -24,8 +25,8 @@
   <!-- Google Font: Source Sans Pro -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
 
-  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/') ?>css/style.css">
-  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/') ?>css/responsive-style.css">
+  <link rel="stylesheet" type="text/css" href="<?= esc_url(base_url('assets/')) ?>css/style.css">
+  <link rel="stylesheet" type="text/css" href="<?= esc_url(base_url('assets/')) ?>css/responsive-style.css">
   <style>
     .text-kecil{
       font-size: 14px;
