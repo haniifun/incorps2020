@@ -1,6 +1,6 @@
 <?php 
   function esc_url($url) {
-      $escape = html_escape($url);
+      $escape = htmlspecialchars($url);
       return $escape;
   }
 ?>
